@@ -1,8 +1,8 @@
 # ALEXA SKILLS
 
 ## Description
-* lambda.js: this contains the code for the Lambda functions that connect with the skill
-* skill.json: this is the interaction model schema that contains the samples and slots of each intent
+* **lambda.js**: this contains the code for the Lambda functions that connect with the skill
+* **skill.json**: this is the interaction model schema that contains the samples and slots of each intent
 
 
 ## Useful Resources
