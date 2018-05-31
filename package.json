@@ -1,0 +1,15 @@
+{
+  "name": "minh-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "modify.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.246.1",
+    "proxy-agent": "^3.0.0"
+  }
+}
