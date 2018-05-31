@@ -1,7 +1,0 @@
-{
-	"triggerDate": "2018-02-06T21:54:32Z",
-	"payload": "test sns message",
-	"callbackType": "sns",
-	"callbackEndpoint": "arn:aws:sns:us-east-1:315327487940:doAtSNSGuide_us-east-1",
-	"requesterEmail": "angela.wei@bms.com"
-}
