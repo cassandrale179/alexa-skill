@@ -1,10 +1,13 @@
-# ALEXA SKILLS
+# Lambda
 
-## Description
-* **lambda.js**: this contains the code for the Lambda functions that connect with the skill
-* **skill.json**: this is the interaction model schema that contains the samples and slots of each intent
+## File Structure 
+    doAtTrack/
+    ├── mock.js                   # Mockserver to refresh credentials
+    ├── readconfig.js             # Parse configuration file
+    ├── win.bat                   # Bat file to set environment variable for Windows
+    ├── tst                       # Shell file to set environment variable for Linux              
+    ├── package.json                   
+    ├── LICENSE
+    └── README.md
 
-
-## Useful Resources
-* Slot types: https://developer.amazon.com/docs/custom-skills/slot-type-reference.html
-* Create Intents and Utterance: https://developer.amazon.com/docs/custom-skills/create-intents-utterances-and-slots.html#json-for-intents-and-utterances-interaction-model-schema
+   
