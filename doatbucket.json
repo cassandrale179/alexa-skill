@@ -1,0 +1,63 @@
+{
+     "AWSTemplateFormatVersion": "2010-09-09",
+     "Description": "AWS CloudFormation Template for creating a S3 bucket and bucket policy for doAtTrack",
+     "Parameters" : {},
+     "Resources" : {
+        "doAtBucket":
+        {
+             "Type": "AWS::S3::Bucket",
+             "Properties": {
+              "BucketName": "doatbucket",
+              "AccessControl": "PublicReadWrite"
+             }
+        },
+        "doAtBucketPolicy" :
+        {
+          "Type" : "AWS::S3::BucketPolicy",
+          "Properties":
+            {
+                "Bucket" : { "Ref" : "doatbucket"},
+                "PolicyDocument":
+                {
+                	"Id": "S3BucketPolicy",
+                  	"Version": "2012-10-17",
+                  	"Statement":
+                    [
+                    	{
+                          	"Sid": "doAtBucketPermission",
+                          	"Action": [
+                            	"s3:getObject",
+                                "s3: putObject",
+                                "s3:getObjectTagging",
+                                "s3:putObjectTagging"
+                          	],
+                          	"Effect": "Allow",
+                          	"Principal": {
+                                "AWS":
+                                [
+                                    "arn:aws:lambda:us-east-1:604243847675:function:doAtLambdaDeleteMessage_us-east-1"
+                                ]
+                            }
+                        }
+                     ]
+                 }
+            }
+        }
+    },
+    "Outputs": {}
+},
+
+{
+    "Resources": {
+        "doAtBucket":
+        {
+             "Type": "AWS::S3::Bucket",
+             "Properties": {
+              "BucketName": "doatbucket",
+              "AccessControl": "PublicReadWrite"
+             }
+        }
+    }
+
+
+}
