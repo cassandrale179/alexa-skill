@@ -1,0 +1,17 @@
+{
+    "Id": "Policy1528209349223",
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Stmt1528209344242",
+            "Action": "s3:*",
+            "Effect": "Allow",
+            "Resource": "arn:aws:s3:::bms-central-us-east-1-doat",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::604243847675:root"
+                ]
+            }
+        }
+    ]
+}
