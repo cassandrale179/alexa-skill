@@ -3,11 +3,11 @@
      "Description": "AWS CloudFormation Template for creating a S3 bucket and bucket policy for doAtTrack",
      "Parameters" : {},
      "Resources" : {
-        "doAtBucket":
+        "doatbucket":
         {
              "Type": "AWS::S3::Bucket",
              "Properties": {
-              "BucketName": "doatbucket",
+              "BucketName": "doatbucket-lem1",
               "AccessControl": "PublicReadWrite"
              }
         },
@@ -26,16 +26,14 @@
                     	{
                           	"Sid": "doAtBucketPermission",
                           	"Action": [
-                            	"s3:getObject",
-                                "s3: putObject",
-                                "s3:getObjectTagging",
-                                "s3:putObjectTagging"
+                            	"s3:*"
                           	],
                           	"Effect": "Allow",
+                            "Resource": "arn:aws:s3:::doatbucket-lem1",
                           	"Principal": {
                                 "AWS":
                                 [
-                                    "arn:aws:lambda:us-east-1:604243847675:function:doAtLambdaDeleteMessage_us-east-1"
+                                    "arn:aws:iam::604243847675:root"
                                 ]
                             }
                         }
@@ -45,19 +43,4 @@
         }
     },
     "Outputs": {}
-},
-
-{
-    "Resources": {
-        "doAtBucket":
-        {
-             "Type": "AWS::S3::Bucket",
-             "Properties": {
-              "BucketName": "doatbucket",
-              "AccessControl": "PublicReadWrite"
-             }
-        }
-    }
-
-
 }
